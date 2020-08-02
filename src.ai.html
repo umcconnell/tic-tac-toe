@@ -1,0 +1,502 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.ai &mdash; tic-tac-toe v1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.cli" href="src.cli.html" />
+    <link rel="prev" title="src" href="src.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> tic-tac-toe
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="src.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">src.ai</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.ai.ai">src.ai.ai module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.ai.minimax">src.ai.minimax module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.ai.minimax_abpruning">src.ai.minimax_abpruning module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.ai.random">src.ai.random module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.ai">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.cli.html">src.cli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.config.html">src.config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.game.html">src.game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.gui.html">src.gui</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.logic.html">src.logic</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">src.ai</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.ai">src.ai.ai module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.minimax">src.ai.minimax module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.minimax_abpruning">src.ai.minimax_abpruning module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.random">src.ai.random module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.cli.html">src.cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.config.html">src.config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.game.html">src.game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.gui.html">src.gui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.logic.html">src.logic</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tic-tac-toe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="src.html">src</a> &raquo;</li>
+        
+      <li>src.ai</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/src.ai.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-ai">
+<h1>src.ai<a class="headerlink" href="#src-ai" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.ai.ai">
+<span id="src-ai-ai-module"></span><h2>src.ai.ai module<a class="headerlink" href="#module-src.ai.ai" title="Permalink to this headline">¶</a></h2>
+<p>Base AI Player</p>
+<dl class="py class">
+<dt id="src.ai.ai.AIPlayer">
+<em class="property">class </em><code class="sig-prename descclassname">src.ai.ai.</code><code class="sig-name descname">AIPlayer</code><a class="headerlink" href="#src.ai.ai.AIPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base Class for all AI Computer Opponents</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ai.minimax">
+<span id="src-ai-minimax-module"></span><h2>src.ai.minimax module<a class="headerlink" href="#module-src.ai.minimax" title="Permalink to this headline">¶</a></h2>
+<p>Minimax Opponent</p>
+<dl class="py class">
+<dt id="src.ai.minimax.MinimaxPlayer">
+<em class="property">class </em><code class="sig-prename descclassname">src.ai.minimax.</code><code class="sig-name descname">MinimaxPlayer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">depth</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.ai.AIPlayer</span></code></a></p>
+<p>Minimax Computer Opponent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>depth: int, optional</strong></dt><dd><p>Maximum search depth for the minimax algorithm. If no depth is
+specified, infinity (<code class="docutils literal notranslate"><span class="pre">math.inf</span></code>) will be used in the minimax
+algorithm. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.minimax" title="src.ai.minimax.MinimaxPlayer.minimax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimax</span></code></a>(grid, depth, maximizing_player)</p></td>
+<td><p>Minimax algorithm</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.play" title="src.ai.minimax.MinimaxPlayer.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>(play_fn, game)</p></td>
+<td><p>Play the AI opponent</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.score" title="src.ai.minimax.MinimaxPlayer.score"><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code></a>(winner)</p></td>
+<td><p>Calculate the game score for a winner node</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="src.ai.minimax.MinimaxPlayer.minimax">
+<code class="sig-name descname">minimax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">grid</span></em>, <em class="sig-param"><span class="n">depth</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">maximizing_player</span><span class="p">:</span> <span class="n">bool</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.minimax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimax algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>grid: Grid</strong></dt><dd><p>Current game state to calculate the minimax value from.</p>
+</dd>
+<dt><strong>depth: int</strong></dt><dd><p>Current search depth of the minimax algorithm.</p>
+</dd>
+<dt><strong>maximizing_player: bool</strong></dt><dd><p>Whether the current player is maximizing or minimizing his score.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Score of the given grid layout.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">src.ai.ABPrunedMinimaxPlayer.minimax</span></code></dt><dd><p>minimax with alpha-beta pruning</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.ai.minimax.MinimaxPlayer.play">
+<code class="sig-name descname">play</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">play_fn</span></em>, <em class="sig-param"><span class="n">game</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play the AI opponent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>play_fn: `callable` [tuple[int, int]]</strong></dt><dd><p>Play function receiving a board position (x, y) on which to place
+the AI’s symbol.</p>
+</dd>
+<dt><strong>game: Game</strong></dt><dd><p>Game object containing the game logic and the current game state.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>tuple[int, int]</dt><dd><p>Position on the board chosen by the algorithm.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.ai.minimax.MinimaxPlayer.score">
+<code class="sig-name descname">score</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">winner</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the game score for a winner node</p>
+<p>Return the score for a given winner. This will be a positive number if
+the winner is the AI, and a negative number if the winner is the human.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>winner: str or int</strong></dt><dd><p>Symbol of the winner node. Can also be a <code class="docutils literal notranslate"><span class="pre">0</span></code> if the state is a
+tie.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Score of the final game state</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ai.minimax_abpruning">
+<span id="src-ai-minimax-abpruning-module"></span><h2>src.ai.minimax_abpruning module<a class="headerlink" href="#module-src.ai.minimax_abpruning" title="Permalink to this headline">¶</a></h2>
+<p>Minimax Opponent with Alpha-Beta-Pruning</p>
+<dl class="py class">
+<dt id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer">
+<em class="property">class </em><code class="sig-prename descclassname">src.ai.minimax_abpruning.</code><code class="sig-name descname">ABPrunedMinimaxPlayer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">depth</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.ai.minimax.MinimaxPlayer" title="src.ai.minimax.MinimaxPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.minimax.MinimaxPlayer</span></code></a></p>
+<p>Alpha-Beta-Pruned Minimax Computer Opponent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>depth: int, optional</strong></dt><dd><p>Maximum search depth for the minimax algorithm. If no depth is
+specified, infinity (<code class="docutils literal notranslate"><span class="pre">math.inf</span></code>) will be used in the minimax
+algorithm. Default is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimax</span></code></a>(grid, depth[, alpha, beta, …])</p></td>
+<td><p>Alpha-beta-pruned minimax algorithm</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code>(play_fn, game)</p></td>
+<td><p>Play the AI opponent</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">score</span></code>(winner)</p></td>
+<td><p>Calculate the game score for a winner node</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax">
+<code class="sig-name descname">minimax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">grid</span></em>, <em class="sig-param"><span class="n">depth</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">beta</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maximizing_player</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alpha-beta-pruned minimax algorithm</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>grid: Grid</strong></dt><dd><p>Current game state to calculate the minimax value from.</p>
+</dd>
+<dt><strong>depth: int</strong></dt><dd><p>Current search depth of the minimax algorithm.</p>
+</dd>
+<dt><strong>alpha, beta: int</strong></dt><dd><p>Values used for alpha-beta pruning.</p>
+</dd>
+<dt><strong>maximizing_player: bool</strong></dt><dd><p>Whether the current player is maximizing or minimizing his score.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>int</dt><dd><p>Score of the given grid layout.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">src.ai.MinimaxPlayer.minimax</span></code></dt><dd><p>minimax without alpha-beta pruning</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ai.random">
+<span id="src-ai-random-module"></span><h2>src.ai.random module<a class="headerlink" href="#module-src.ai.random" title="Permalink to this headline">¶</a></h2>
+<p>Random Opponent</p>
+<dl class="py class">
+<dt id="src.ai.random.RandomPlayer">
+<em class="property">class </em><code class="sig-prename descclassname">src.ai.random.</code><code class="sig-name descname">RandomPlayer</code><a class="headerlink" href="#src.ai.random.RandomPlayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.ai.AIPlayer</span></code></a></p>
+<p>Randomly Playing Computer Opponent</p>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.random.RandomPlayer.play" title="src.ai.random.RandomPlayer.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>(play_fn, game)</p></td>
+<td><p>Play the AI opponent</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="src.ai.random.RandomPlayer.play">
+<code class="sig-name descname">play</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">play_fn</span></em>, <em class="sig-param"><span class="n">game</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.random.RandomPlayer.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play the AI opponent</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>play_fn: `callable` [tuple[int, int]]</strong></dt><dd><p>Play function receiving a board position (x, y) on which to place
+the AI’s symbol.</p>
+</dd>
+<dt><strong>game: Game</strong></dt><dd><p>Game object containing the game logic and the current game state.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>tuple[int, int]</dt><dd><p>Random position on the board chosen by the algorithm.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ai">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.ai" title="Permalink to this headline">¶</a></h2>
+<p>Collection of AI Computer Opponents</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="src.cli.html" class="btn btn-neutral float-right" title="src.cli" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="src.html" class="btn btn-neutral float-left" title="src" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Ulysse McConnell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

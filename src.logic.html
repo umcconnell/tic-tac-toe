@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>src.logic &mdash; tic-tac-toe v1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="src.gui" href="src.gui.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> tic-tac-toe
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="src.html">src</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="src.ai.html">src.ai</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.cli.html">src.cli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.config.html">src.config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.game.html">src.game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="src.gui.html">src.gui</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">src.logic</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.logic.grid">src.logic.grid module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.logic.logic">src.logic.logic module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-src.logic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="src.ai.html">src.ai</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.cli.html">src.cli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.config.html">src.config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.game.html">src.game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="src.gui.html">src.gui</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">src.logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.logic.grid">src.logic.grid module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.logic.logic">src.logic.logic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.logic">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tic-tac-toe</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="src.html">src</a> &raquo;</li>
+        
+      <li>src.logic</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/src.logic.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-logic">
+<h1>src.logic<a class="headerlink" href="#src-logic" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.logic.grid">
+<span id="src-logic-grid-module"></span><h2>src.logic.grid module<a class="headerlink" href="#module-src.logic.grid" title="Permalink to this headline">¶</a></h2>
+<p>Tic-Tac-Toe Grid</p>
+<dl class="py class">
+<dt id="src.logic.grid.Grid">
+<em class="property">class </em><code class="sig-prename descclassname">src.logic.grid.</code><code class="sig-name descname">Grid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">turn</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'X'</span></em>, <em class="sig-param"><span class="n">size</span><span class="p">:</span> <span class="n">int</span> <span class="o">=</span> <span class="default_value">3</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tic-Tac-Toe Grid Base Class</p>
+<p>Base tic-tac-toe grid supporting pretty-printing, object subscription,
+winner detection, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>turn: str, optional {‘X’, ‘O’   }</strong></dt><dd><p>First player’s symbol, which can be either ‘X’ or ‘O’. Default is ‘X’.</p>
+</dd>
+<dt><strong>size: int, optional</strong></dt><dd><p>Playing field grid size. Defaults to <code class="docutils literal notranslate"><span class="pre">GRID_SIZE</span></code> config.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Printing to console:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+<span class="go">. . .</span>
+<span class="go">X . .</span>
+<span class="go">. . .</span>
+</pre></div>
+</div>
+<p>Object subscription:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;O&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">O</span>
+</pre></div>
+</div>
+<p>Iteration over available slots:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span> <span class="o">=</span> <span class="n">Grid</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;X&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">grid</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;O&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">game</span><span class="o">.</span><span class="n">logic</span><span class="o">.</span><span class="n">available_slots</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<span class="go">0, 1</span>
+<span class="go">0, 2</span>
+<span class="gp">...</span>
+<span class="go">2, 1</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>grid: `list` [`list` [str or `None`]]</strong></dt><dd><p>Actual tic-tac-toe grid as a 2D list.</p>
+</dd>
+<dt><strong>turn: str {‘X’, ‘O’}</strong></dt><dd><p>Current player’s symbol.</p>
+</dd>
+<dt><strong>size: int</strong></dt><dd><p>Size of the grid.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.logic.grid.Grid.available_slots" title="src.logic.grid.Grid.available_slots"><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_slots</span></code></a>()</p></td>
+<td><p>Iterate through available slots in the grid</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.logic.grid.Grid.is_end" title="src.logic.grid.Grid.is_end"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_end</span></code></a>()</p></td>
+<td><p>Check if the board is full</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.logic.grid.Grid.is_valid" title="src.logic.grid.Grid.is_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_valid</span></code></a>(player, pos)</p></td>
+<td><p>Check whether a move is valid.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="src.logic.grid.Grid.available_slots">
+<code class="sig-name descname">available_slots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid.available_slots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterate through available slots in the grid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>tuple</cite> [int, int]</dt><dd><p>Position (x, y) on the grid of available slot.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.logic.grid.Grid.is_end">
+<code class="sig-name descname">is_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid.is_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the board is full</p>
+<p>Test rows, columns, diagonals and anti-diagonals for a possible winner</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>bool or str or int</dt><dd><ul class="simple">
+<li><p>Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the game is not over</p></li>
+<li><p>Returns <code class="docutils literal notranslate"><span class="pre">0</span></code> if the game is a tie</p></li>
+<li><p>Returns the symbol of the winning player if a player has won</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This method starts by walking along the diagonal of the grid, while
+ruling out impossible rows. Therefore, the minimum possible runtime is
+<code class="docutils literal notranslate"><span class="pre">n</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the size of the grid.</p>
+<div class="math notranslate nohighlight">
+\[\Omega(is\_end()) \in n\]</div>
+<p>However, in unlucky situations, the algorithm could possibly have to
+check every row, column, and the entire board again! This results in
+a maximum time complexity of:</p>
+<div class="math notranslate nohighlight">
+\[O(is\_end()) = n + 3n^2 \
+O(is\_end()) \in n^2\]</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.logic.grid.Grid.is_valid">
+<code class="sig-name descname">is_valid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">player</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">pos</span><span class="p">:</span> <span class="n">tuple</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether a move is valid.</p>
+<p>Checks if it’s the specified player’s turn and the move is on an empty
+field on the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>player: str</strong></dt><dd><p>Symbol of the player trying to make a move.</p>
+</dd>
+<dt><strong>pos: `tuple` [int, int]</strong></dt><dd><p>Position (x, y) of the desired move.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>bool</dt><dd><p>Whether or not the move is valid.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.logic.logic">
+<span id="src-logic-logic-module"></span><h2>src.logic.logic module<a class="headerlink" href="#module-src.logic.logic" title="Permalink to this headline">¶</a></h2>
+<p>Tic-Tac-Toe Logic</p>
+<dl class="py class">
+<dt id="src.logic.logic.Logic">
+<em class="property">class </em><code class="sig-prename descclassname">src.logic.logic.</code><code class="sig-name descname">Logic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_game</span></em>, <em class="sig-param"><span class="n">turn</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="default_value">'X'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.logic.Logic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.logic.grid.Grid" title="src.logic.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.logic.grid.Grid</span></code></a></p>
+<p>Tic-Tac-Toe Logic Class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>_game: Game</strong></dt><dd><p>Game instance passed from Game initializer.</p>
+</dd>
+<dt><strong>turn: str, optional {‘X’, ‘O’}</strong></dt><dd><p>Beginning player’s turn. Must be either ‘X’ or ‘O’. Default is ‘X’.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_slots</span></code>()</p></td>
+<td><p>Iterate through available slots in the grid</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_end</span></code>()</p></td>
+<td><p>Check if the board is full</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_valid</span></code>(player, pos)</p></td>
+<td><p>Check whether a move is valid.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.logic.logic.Logic.next_turn" title="src.logic.logic.Logic.next_turn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next_turn</span></code></a>()</p></td>
+<td><p>Switch current player’s turn to next player</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.logic.logic.Logic.play" title="src.logic.logic.Logic.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>(x, y)</p></td>
+<td><p>Execute a player’s turn on the board</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.logic.logic.Logic.set_at" title="src.logic.logic.Logic.set_at"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_at</span></code></a>(x, y, val)</p></td>
+<td><p>Set a valid value at a given point on the grid</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt id="src.logic.logic.Logic.next_turn">
+<code class="sig-name descname">next_turn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.logic.Logic.next_turn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switch current player’s turn to next player</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.logic.logic.Logic.play">
+<code class="sig-name descname">play</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#src.logic.logic.Logic.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a player’s turn on the board</p>
+<p>Place a player’s symbol on a specified position on the board and change
+turns.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x, y: int</strong></dt><dd><p>Position on the board at which to place player’s symbol.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt>bool or str or int</dt><dd><ul class="simple">
+<li><p>Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the game is not over</p></li>
+<li><p>Returns <code class="docutils literal notranslate"><span class="pre">0</span></code> if the game is a tie</p></li>
+<li><p>Returns the symbol of the winning player if a player has won</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="src.logic.logic.Logic.set_at">
+<code class="sig-name descname">set_at</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.logic.Logic.set_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a valid value at a given point on the grid</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x, y: int</strong></dt><dd><p>Position on the grid.</p>
+</dd>
+<dt><strong>val: str</strong></dt><dd><p>Value to be set.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.logic">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.logic" title="Permalink to this headline">¶</a></h2>
+<p>Tic-Tac-Toe Logic Module</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="src.gui.html" class="btn btn-neutral float-left" title="src.gui" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Ulysse McConnell
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
