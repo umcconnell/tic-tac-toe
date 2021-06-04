@@ -13,6 +13,8 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
@@ -199,8 +202,8 @@
 <span id="src-ai-ai-module"></span><h2>src.ai.ai module<a class="headerlink" href="#module-src.ai.ai" title="Permalink to this headline">¶</a></h2>
 <p>Base AI Player</p>
 <dl class="py class">
-<dt id="src.ai.ai.AIPlayer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">src.ai.ai.</span></code><code class="sig-name descname"><span class="pre">AIPlayer</span></code><a class="headerlink" href="#src.ai.ai.AIPlayer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.ai.AIPlayer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.ai.</span></span><span class="sig-name descname"><span class="pre">AIPlayer</span></span><a class="headerlink" href="#src.ai.ai.AIPlayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base Class for all AI Computer Opponents</p>
 </dd></dl>
@@ -210,8 +213,8 @@
 <span id="src-ai-minimax-module"></span><h2>src.ai.minimax module<a class="headerlink" href="#module-src.ai.minimax" title="Permalink to this headline">¶</a></h2>
 <p>Minimax Opponent</p>
 <dl class="py class">
-<dt id="src.ai.minimax.MinimaxPlayer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">src.ai.minimax.</span></code><code class="sig-name descname"><span class="pre">MinimaxPlayer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.minimax.MinimaxPlayer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.minimax.</span></span><span class="sig-name descname"><span class="pre">MinimaxPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.ai.AIPlayer</span></code></a></p>
 <p>Minimax Computer Opponent</p>
 <dl class="field-list simple">
@@ -243,8 +246,8 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </tbody>
 </table>
 <dl class="py method">
-<dt id="src.ai.minimax.MinimaxPlayer.minimax">
-<code class="sig-name descname"><span class="pre">minimax</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.minimax" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.minimax.MinimaxPlayer.minimax">
+<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.minimax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Minimax algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -274,8 +277,8 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dd></dl>
 
 <dl class="py method">
-<dt id="src.ai.minimax.MinimaxPlayer.play">
-<code class="sig-name descname"><span class="pre">play</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.play" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.minimax.MinimaxPlayer.play">
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play the AI opponent</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -297,8 +300,8 @@ the AI’s symbol.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="src.ai.minimax.MinimaxPlayer.score">
-<code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">winner</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.score" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.minimax.MinimaxPlayer.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">winner</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.score" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the game score for a winner node</p>
 <p>Return the score for a given winner. This will be a positive number if
 the winner is the AI, and a negative number if the winner is the human.</p>
@@ -326,8 +329,8 @@ tie.</p>
 <span id="src-ai-minimax-abpruning-module"></span><h2>src.ai.minimax_abpruning module<a class="headerlink" href="#module-src.ai.minimax_abpruning" title="Permalink to this headline">¶</a></h2>
 <p>Minimax Opponent with Alpha-Beta-Pruning</p>
 <dl class="py class">
-<dt id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">src.ai.minimax_abpruning.</span></code><code class="sig-name descname"><span class="pre">ABPrunedMinimaxPlayer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.minimax_abpruning.</span></span><span class="sig-name descname"><span class="pre">ABPrunedMinimaxPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#src.ai.minimax.MinimaxPlayer" title="src.ai.minimax.MinimaxPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.minimax.MinimaxPlayer</span></code></a></p>
 <p>Alpha-Beta-Pruned Minimax Computer Opponent</p>
 <dl class="field-list simple">
@@ -359,8 +362,8 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </tbody>
 </table>
 <dl class="py method">
-<dt id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax">
-<code class="sig-name descname"><span class="pre">minimax</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax">
+<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Alpha-beta-pruned minimax algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -398,8 +401,8 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 <span id="src-ai-random-module"></span><h2>src.ai.random module<a class="headerlink" href="#module-src.ai.random" title="Permalink to this headline">¶</a></h2>
 <p>Random Opponent</p>
 <dl class="py class">
-<dt id="src.ai.random.RandomPlayer">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">src.ai.random.</span></code><code class="sig-name descname"><span class="pre">RandomPlayer</span></code><a class="headerlink" href="#src.ai.random.RandomPlayer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.random.RandomPlayer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.random.</span></span><span class="sig-name descname"><span class="pre">RandomPlayer</span></span><a class="headerlink" href="#src.ai.random.RandomPlayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.ai.AIPlayer</span></code></a></p>
 <p>Randomly Playing Computer Opponent</p>
 <p class="rubric">Methods</p>
@@ -415,8 +418,8 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </tbody>
 </table>
 <dl class="py method">
-<dt id="src.ai.random.RandomPlayer.play">
-<code class="sig-name descname"><span class="pre">play</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.random.RandomPlayer.play" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="src.ai.random.RandomPlayer.play">
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.random.RandomPlayer.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play the AI opponent</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
