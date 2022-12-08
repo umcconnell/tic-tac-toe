@@ -14,7 +14,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -62,10 +64,33 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">src.ai</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.ai">src.ai.ai module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.minimax">src.ai.minimax module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.minimax_abpruning">src.ai.minimax_abpruning module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.random">src.ai.random module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.ai">src.ai.ai module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.ai.ai.AIPlayer"><code class="docutils literal notranslate"><span class="pre">AIPlayer</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.minimax">src.ai.minimax module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer"><code class="docutils literal notranslate"><span class="pre">MinimaxPlayer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.minimax"><code class="docutils literal notranslate"><span class="pre">MinimaxPlayer.minimax()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.play"><code class="docutils literal notranslate"><span class="pre">MinimaxPlayer.play()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.score"><code class="docutils literal notranslate"><span class="pre">MinimaxPlayer.score()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.minimax_abpruning">src.ai.minimax_abpruning module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer"><code class="docutils literal notranslate"><span class="pre">ABPrunedMinimaxPlayer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax"><code class="docutils literal notranslate"><span class="pre">ABPrunedMinimaxPlayer.minimax()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.ai.random">src.ai.random module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.ai.random.RandomPlayer"><code class="docutils literal notranslate"><span class="pre">RandomPlayer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.ai.random.RandomPlayer.play"><code class="docutils literal notranslate"><span class="pre">RandomPlayer.play()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-src.ai">Module contents</a></li>
 </ul>
 </li>
@@ -89,9 +114,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="src.html">src</a> &raquo;</li>
-      <li>src.ai</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="src.html">src</a></li>
+      <li class="breadcrumb-item active">src.ai</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/src.ai.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -102,28 +127,28 @@
            <div itemprop="articleBody">
              
   <section id="src-ai">
-<h1>src.ai<a class="headerlink" href="#src-ai" title="Permalink to this headline"></a></h1>
+<h1>src.ai<a class="headerlink" href="#src-ai" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-src.ai.ai">
-<span id="src-ai-ai-module"></span><h2>src.ai.ai module<a class="headerlink" href="#module-src.ai.ai" title="Permalink to this headline"></a></h2>
+<span id="src-ai-ai-module"></span><h2>src.ai.ai module<a class="headerlink" href="#module-src.ai.ai" title="Permalink to this heading"></a></h2>
 <p>Base AI Player</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.ai.ai.AIPlayer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.ai.</span></span><span class="sig-name descname"><span class="pre">AIPlayer</span></span><a class="headerlink" href="#src.ai.ai.AIPlayer" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.ai.</span></span><span class="sig-name descname"><span class="pre">AIPlayer</span></span><a class="headerlink" href="#src.ai.ai.AIPlayer" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Base Class for all AI Computer Opponents</p>
 </dd></dl>
 
 </section>
 <section id="module-src.ai.minimax">
-<span id="src-ai-minimax-module"></span><h2>src.ai.minimax module<a class="headerlink" href="#module-src.ai.minimax" title="Permalink to this headline"></a></h2>
+<span id="src-ai-minimax-module"></span><h2>src.ai.minimax module<a class="headerlink" href="#module-src.ai.minimax" title="Permalink to this heading"></a></h2>
 <p>Minimax Opponent</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.ai.minimax.MinimaxPlayer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.minimax.</span></span><span class="sig-name descname"><span class="pre">MinimaxPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.ai.AIPlayer</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.minimax.</span></span><span class="sig-name descname"><span class="pre">MinimaxPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">AIPlayer</span></code></a></p>
 <p>Minimax Computer Opponent</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -136,7 +161,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -155,7 +180,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="src.ai.minimax.MinimaxPlayer.minimax">
-<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.minimax" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.minimax" title="Permalink to this definition"></a></dt>
 <dd><p>Minimax algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -234,12 +259,12 @@ tie.</p>
 
 </section>
 <section id="module-src.ai.minimax_abpruning">
-<span id="src-ai-minimax-abpruning-module"></span><h2>src.ai.minimax_abpruning module<a class="headerlink" href="#module-src.ai.minimax_abpruning" title="Permalink to this headline"></a></h2>
+<span id="src-ai-minimax-abpruning-module"></span><h2>src.ai.minimax_abpruning module<a class="headerlink" href="#module-src.ai.minimax_abpruning" title="Permalink to this heading"></a></h2>
 <p>Minimax Opponent with Alpha-Beta-Pruning</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.minimax_abpruning.</span></span><span class="sig-name descname"><span class="pre">ABPrunedMinimaxPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#src.ai.minimax.MinimaxPlayer" title="src.ai.minimax.MinimaxPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.minimax.MinimaxPlayer</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.minimax_abpruning.</span></span><span class="sig-name descname"><span class="pre">ABPrunedMinimaxPlayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.ai.minimax.MinimaxPlayer" title="src.ai.minimax.MinimaxPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">MinimaxPlayer</span></code></a></p>
 <p>Alpha-Beta-Pruned Minimax Computer Opponent</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -252,7 +277,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -271,7 +296,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </table>
 <dl class="py method">
 <dt class="sig sig-object py" id="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax">
-<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="Permalink to this definition"></a></dt>
 <dd><p>Alpha-beta-pruned minimax algorithm</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,15 +331,15 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 
 </section>
 <section id="module-src.ai.random">
-<span id="src-ai-random-module"></span><h2>src.ai.random module<a class="headerlink" href="#module-src.ai.random" title="Permalink to this headline"></a></h2>
+<span id="src-ai-random-module"></span><h2>src.ai.random module<a class="headerlink" href="#module-src.ai.random" title="Permalink to this heading"></a></h2>
 <p>Random Opponent</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.ai.random.RandomPlayer">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ai.random.</span></span><span class="sig-name descname"><span class="pre">RandomPlayer</span></span><a class="headerlink" href="#src.ai.random.RandomPlayer" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.ai.ai.AIPlayer</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.ai.random.</span></span><span class="sig-name descname"><span class="pre">RandomPlayer</span></span><a class="headerlink" href="#src.ai.random.RandomPlayer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">AIPlayer</span></code></a></p>
 <p>Randomly Playing Computer Opponent</p>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -352,7 +377,7 @@ the AI’s symbol.</p>
 
 </section>
 <section id="module-src.ai">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.ai" title="Permalink to this headline"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.ai" title="Permalink to this heading"></a></h2>
 <p>Collection of AI Computer Opponents</p>
 </section>
 </section>

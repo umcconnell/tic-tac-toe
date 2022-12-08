@@ -14,7 +14,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -65,8 +67,24 @@
 <li class="toctree-l1"><a class="reference internal" href="src.gui.html">src.gui</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">src.logic</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.logic.grid">src.logic.grid module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-src.logic.logic">src.logic.logic module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.logic.grid">src.logic.grid module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.logic.grid.Grid"><code class="docutils literal notranslate"><span class="pre">Grid</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.logic.grid.Grid.available_slots"><code class="docutils literal notranslate"><span class="pre">Grid.available_slots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.logic.grid.Grid.is_end"><code class="docutils literal notranslate"><span class="pre">Grid.is_end()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.logic.grid.Grid.is_valid"><code class="docutils literal notranslate"><span class="pre">Grid.is_valid()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-src.logic.logic">src.logic.logic module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.logic.logic.Logic"><code class="docutils literal notranslate"><span class="pre">Logic</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.logic.logic.Logic.next_turn"><code class="docutils literal notranslate"><span class="pre">Logic.next_turn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.logic.logic.Logic.play"><code class="docutils literal notranslate"><span class="pre">Logic.play()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.logic.logic.Logic.set_at"><code class="docutils literal notranslate"><span class="pre">Logic.set_at()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#module-src.logic">Module contents</a></li>
 </ul>
 </li>
@@ -85,9 +103,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="src.html">src</a> &raquo;</li>
-      <li>src.logic</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="src.html">src</a></li>
+      <li class="breadcrumb-item active">src.logic</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/src.logic.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -98,16 +116,16 @@
            <div itemprop="articleBody">
              
   <section id="src-logic">
-<h1>src.logic<a class="headerlink" href="#src-logic" title="Permalink to this headline"></a></h1>
+<h1>src.logic<a class="headerlink" href="#src-logic" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-src.logic.grid">
-<span id="src-logic-grid-module"></span><h2>src.logic.grid module<a class="headerlink" href="#module-src.logic.grid" title="Permalink to this headline"></a></h2>
+<span id="src-logic-grid-module"></span><h2>src.logic.grid module<a class="headerlink" href="#module-src.logic.grid" title="Permalink to this heading"></a></h2>
 <p>Tic-Tac-Toe Grid</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.logic.grid.Grid">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.logic.grid.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">turn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'X'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.logic.grid.</span></span><span class="sig-name descname"><span class="pre">Grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">turn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'X'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Tic-Tac-Toe Grid Base Class</p>
 <p>Base tic-tac-toe grid supporting pretty-printing, object subscription,
@@ -164,7 +182,7 @@ winner detection, etc.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -228,7 +246,7 @@ O(is\_end()) \in n^2\]</div>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="src.logic.grid.Grid.is_valid">
-<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid.is_valid" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid.is_valid" title="Permalink to this definition"></a></dt>
 <dd><p>Check whether a move is valid.</p>
 <p>Checks if it’s the specified player’s turn and the move is on an empty
 field on the grid.</p>
@@ -254,12 +272,12 @@ field on the grid.</p>
 
 </section>
 <section id="module-src.logic.logic">
-<span id="src-logic-logic-module"></span><h2>src.logic.logic module<a class="headerlink" href="#module-src.logic.logic" title="Permalink to this headline"></a></h2>
+<span id="src-logic-logic-module"></span><h2>src.logic.logic module<a class="headerlink" href="#module-src.logic.logic" title="Permalink to this heading"></a></h2>
 <p>Tic-Tac-Toe Logic</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="src.logic.logic.Logic">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.logic.logic.</span></span><span class="sig-name descname"><span class="pre">Logic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turn</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'X'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.logic.Logic" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference internal" href="#src.logic.grid.Grid" title="src.logic.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">src.logic.grid.Grid</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">src.logic.logic.</span></span><span class="sig-name descname"><span class="pre">Logic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'X'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.logic.Logic" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#src.logic.grid.Grid" title="src.logic.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a></p>
 <p>Tic-Tac-Toe Logic Class</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -272,7 +290,7 @@ field on the grid.</p>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-default">
+<table class="autosummary longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -350,7 +368,7 @@ turns.</p>
 
 </section>
 <section id="module-src.logic">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.logic" title="Permalink to this headline"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.logic" title="Permalink to this heading"></a></h2>
 <p>Tic-Tac-Toe Logic Module</p>
 </section>
 </section>
