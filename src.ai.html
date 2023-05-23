@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>src.ai &mdash; tic-tac-toe v1.0.0 documentation</title>
@@ -11,10 +11,9 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> tic-tac-toe
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tic-tac-toe
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -114,7 +117,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="src.html">src</a></li>
       <li class="breadcrumb-item active">src.ai</li>
       <li class="wy-breadcrumbs-aside">
@@ -151,7 +154,7 @@
 <dd><p>Bases: <a class="reference internal" href="#src.ai.ai.AIPlayer" title="src.ai.ai.AIPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">AIPlayer</span></code></a></p>
 <p>Minimax Computer Opponent</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>depth: int, optional</strong></dt><dd><p>Maximum search depth for the minimax algorithm. If no depth is
 specified, infinity (<code class="docutils literal notranslate"><span class="pre">math.inf</span></code>) will be used in the minimax
@@ -162,10 +165,6 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.minimax.MinimaxPlayer.minimax" title="src.ai.minimax.MinimaxPlayer.minimax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimax</span></code></a>(grid, depth, maximizing_player)</p></td>
 <td><p>Minimax algorithm</p></td>
@@ -183,7 +182,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 <span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.minimax" title="Permalink to this definition"></a></dt>
 <dd><p>Minimax algorithm</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>grid: Grid</strong></dt><dd><p>Current game state to calculate the minimax value from.</p>
 </dd>
@@ -193,7 +192,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Score of the given grid layout.</p>
 </dd>
@@ -214,7 +213,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 <span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax.MinimaxPlayer.play" title="Permalink to this definition"></a></dt>
 <dd><p>Play the AI opponent</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>play_fn: `callable` [tuple[int, int]]</strong></dt><dd><p>Play function receiving a board position (x, y) on which to place
 the AI’s symbol.</p>
@@ -223,7 +222,7 @@ the AI’s symbol.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>tuple[int, int]</dt><dd><p>Position on the board chosen by the algorithm.</p>
 </dd>
@@ -239,14 +238,14 @@ the AI’s symbol.</p>
 <p>Return the score for a given winner. This will be a positive number if
 the winner is the AI, and a negative number if the winner is the human.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>winner: str or int</strong></dt><dd><p>Symbol of the winner node. Can also be a <code class="docutils literal notranslate"><span class="pre">0</span></code> if the state is a
 tie.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Score of the final game state</p>
 </dd>
@@ -267,7 +266,7 @@ tie.</p>
 <dd><p>Bases: <a class="reference internal" href="#src.ai.minimax.MinimaxPlayer" title="src.ai.minimax.MinimaxPlayer"><code class="xref py py-class docutils literal notranslate"><span class="pre">MinimaxPlayer</span></code></a></p>
 <p>Alpha-Beta-Pruned Minimax Computer Opponent</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>depth: int, optional</strong></dt><dd><p>Maximum search depth for the minimax algorithm. If no depth is
 specified, infinity (<code class="docutils literal notranslate"><span class="pre">math.inf</span></code>) will be used in the minimax
@@ -278,10 +277,6 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minimax</span></code></a>(grid, depth[, alpha, beta, ...])</p></td>
 <td><p>Alpha-beta-pruned minimax algorithm</p></td>
@@ -299,7 +294,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 <span class="sig-name descname"><span class="pre">minimax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximizing_player</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.minimax_abpruning.ABPrunedMinimaxPlayer.minimax" title="Permalink to this definition"></a></dt>
 <dd><p>Alpha-beta-pruned minimax algorithm</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>grid: Grid</strong></dt><dd><p>Current game state to calculate the minimax value from.</p>
 </dd>
@@ -311,7 +306,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>int</dt><dd><p>Score of the given grid layout.</p>
 </dd>
@@ -340,10 +335,6 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 <p>Randomly Playing Computer Opponent</p>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#src.ai.random.RandomPlayer.play" title="src.ai.random.RandomPlayer.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>(play_fn, game)</p></td>
 <td><p>Play the AI opponent</p></td>
@@ -355,7 +346,7 @@ algorithm. Default is <code class="docutils literal notranslate"><span class="pr
 <span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_fn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ai.random.RandomPlayer.play" title="Permalink to this definition"></a></dt>
 <dd><p>Play the AI opponent</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>play_fn: `callable` [tuple[int, int]]</strong></dt><dd><p>Play function receiving a board position (x, y) on which to place
 the AI’s symbol.</p>
@@ -364,7 +355,7 @@ the AI’s symbol.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>tuple[int, int]</dt><dd><p>Random position on the board chosen by the algorithm.</p>
 </dd>

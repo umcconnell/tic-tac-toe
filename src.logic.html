@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>src.logic &mdash; tic-tac-toe v1.0.0 documentation</title>
@@ -11,10 +11,9 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -29,11 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> tic-tac-toe
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tic-tac-toe
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -103,7 +106,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="src.html">src</a></li>
       <li class="breadcrumb-item active">src.logic</li>
       <li class="wy-breadcrumbs-aside">
@@ -131,7 +134,7 @@
 <p>Base tic-tac-toe grid supporting pretty-printing, object subscription,
 winner detection, etc.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>turn: str, optional {‘X’, ‘O’   }</strong></dt><dd><p>First player’s symbol, which can be either ‘X’ or ‘O’. Default is ‘X’.</p>
 </dd>
@@ -165,12 +168,12 @@ winner detection, etc.</p>
 <span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">, </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 <span class="go">0, 1</span>
 <span class="go">0, 2</span>
-<span class="gp">...</span>
+<span class="go">...</span>
 <span class="go">2, 1</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>grid: `list` [`list` [str or `None`]]</strong></dt><dd><p>Actual tic-tac-toe grid as a 2D list.</p>
 </dd>
@@ -183,10 +186,6 @@ winner detection, etc.</p>
 </dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#src.logic.grid.Grid.available_slots" title="src.logic.grid.Grid.available_slots"><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_slots</span></code></a>()</p></td>
 <td><p>Iterate through available slots in the grid</p></td>
@@ -204,7 +203,7 @@ winner detection, etc.</p>
 <span class="sig-name descname"><span class="pre">available_slots</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.grid.Grid.available_slots" title="Permalink to this definition"></a></dt>
 <dd><p>Iterate through available slots in the grid</p>
 <dl class="field-list simple">
-<dt class="field-odd">Yields</dt>
+<dt class="field-odd">Yields<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><cite>tuple</cite> [int, int]</dt><dd><p>Position (x, y) on the grid of available slot.</p>
 </dd>
@@ -219,7 +218,7 @@ winner detection, etc.</p>
 <dd><p>Check if the board is full</p>
 <p>Test rows, columns, diagonals and anti-diagonals for a possible winner</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt>bool or str or int</dt><dd><ul class="simple">
 <li><p>Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the game is not over</p></li>
@@ -251,7 +250,7 @@ O(is\_end()) \in n^2\]</div>
 <p>Checks if it’s the specified player’s turn and the move is on an empty
 field on the grid.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>player: str</strong></dt><dd><p>Symbol of the player trying to make a move.</p>
 </dd>
@@ -259,7 +258,7 @@ field on the grid.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>bool</dt><dd><p>Whether or not the move is valid.</p>
 </dd>
@@ -280,7 +279,7 @@ field on the grid.</p>
 <dd><p>Bases: <a class="reference internal" href="#src.logic.grid.Grid" title="src.logic.grid.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a></p>
 <p>Tic-Tac-Toe Logic Class</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>_game: Game</strong></dt><dd><p>Game instance passed from Game initializer.</p>
 </dd>
@@ -291,10 +290,6 @@ field on the grid.</p>
 </dl>
 <p class="rubric">Methods</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_slots</span></code>()</p></td>
 <td><p>Iterate through available slots in the grid</p></td>
@@ -329,13 +324,13 @@ field on the grid.</p>
 <p>Place a player’s symbol on a specified position on the board and change
 turns.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>x, y: int</strong></dt><dd><p>Position on the board at which to place player’s symbol.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt>bool or str or int</dt><dd><ul class="simple">
 <li><p>Returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the game is not over</p></li>
@@ -353,7 +348,7 @@ turns.</p>
 <span class="sig-name descname"><span class="pre">set_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">val</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.logic.logic.Logic.set_at" title="Permalink to this definition"></a></dt>
 <dd><p>Set a valid value at a given point on the grid</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>x, y: int</strong></dt><dd><p>Position on the grid.</p>
 </dd>
